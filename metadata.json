@@ -1,0 +1,6 @@
+{
+  "name": "SSSRU Ikhtibar (اختبار)",
+  "description": "Interactive exam preparation and revision platform for the Brunei SSSRU past-year exam series (2017–2023) with Jawi typesetting, timed simulation, digital ink canvas, and model answers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

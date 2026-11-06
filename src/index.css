@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-arabic: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
+    --font-quran: 'Amiri', 'Noto Naskh Arabic', serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+.font-jawi {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  text-align: right;
+  line-height: 2.1;
+}
+
+.font-quran {
+  font-family: var(--font-quran);
+  direction: rtl;
+  text-align: right;
+}
+
+/* Subtle arabesque watermark texture */
+.bg-arabesque-pattern {
+  background-color: #fbfbf9;
+  background-image: radial-gradient(#0d3b3e 0.65px, transparent 0.65px), radial-gradient(#d4af37 0.65px, #fbfbf9 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  background-blend-mode: normal;
+  opacity: 0.98;
+}
+
+.dark .bg-arabesque-pattern {
+  background-color: #0b1f21;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.15) 0.65px, transparent 0.65px), radial-gradient(rgba(13, 59, 62, 0.4) 0.65px, #0b1f21 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+}
+
+/* Exam paper lined canvas effect */
+.bg-exam-ruled {
+  background-color: #ffffff;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    #e8edee 31px,
+    #e8edee 32px
+  );
+  line-height: 32px;
+}
+
+.dark .bg-exam-ruled {
+  background-color: #12282a;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    #1b3b3f 31px,
+    #1b3b3f 32px
+  );
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
